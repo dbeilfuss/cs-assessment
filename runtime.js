@@ -27,27 +27,31 @@ function getSizedArray(size) {
 }
 
 const tinyArray = getSizedArray(10);
+const smallTinyArray = getSizedArray(50);
 const smallArray = getSizedArray(100);
+const mediumSmallArray = getSizedArray(500);
 const mediumArray = getSizedArray(1000);
-const medLargeArray = getSizedArray(5000);
+const largeMediumArray = getSizedArray(5000);
 const largeArray = getSizedArray(10000);
 const verylargeArray = getSizedArray(50000);
 const extraLargeArray = getSizedArray(100000);
+const extraExtraLargeArray = getSizedArray(500000);
+const extremelyLargeArray = getSizedArray(1000000);
 
 // How long does it take to double every number in a given
 // array?
 
-const currentArray = medLargeArray;
-
-// Try it with first function
-perf.start(); // Starts timer
-doublerAppend(currentArray);
-let resultsAppend = perf.stop(); // Stops timer and save time results
+const currentArray = extraLargeArray;
 
 // Try it with second function
 perf.start();
 doublerInsert(currentArray);
 let resultsInsert = perf.stop();
+
+// Try it with first function
+perf.start(); // Starts timer
+doublerAppend(currentArray);
+let resultsAppend = perf.stop(); // Stops timer and save time results
 
 console.log("Results for the extraLargeArray");
 console.log("insert", resultsInsert.preciseWords);
