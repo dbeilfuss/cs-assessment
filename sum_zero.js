@@ -61,17 +61,17 @@ Time Complexity = O(n²)
 
 I would think that this would mean that an array of 10 would take 100 steps to complete, but this is not the case.
 
-Length: Steps:
-2       1
-3       3
-4       6
-5       10      
-6       15
-7       21
-8       28
-9       36
-10      45
-11      55
+Length: Steps:  Ratio:
+2       1       2:1
+3       3       1:1
+4       6       2:3
+5       10      1:2
+6       15      1:2
+7       21      1:3
+8       28      1:3
+9       36      1:4
+10      45      1:4
+11      55      1:5
 
 
 

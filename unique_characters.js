@@ -35,7 +35,7 @@ function hasUniqueChars(testWord) {
   return true;
 }
 
-hasUniqueChars("Mondayy");
+hasUniqueChars("Monday");
 
 /* 
 Time Complexity:
@@ -44,17 +44,17 @@ Each additional letter is compared to all the letters before it:
 
 The outer loop runs 'n' times.  The inner loop runs approximately n times on the first iteration of the outer loop, but runs fewer and fewer times with each iteration.  The difference adds up, with the total number of steps being '(n * (n - 1)) / 2'.
 
-Length: Steps:
-2       1
-3       3
-4       6
-5       10      
-6       15
-7       21
-8       28
-9       36
-10      45
-11      55
+Length: Steps:  Ratio:
+2       1       2:1
+3       3       1:1
+4       6       2:3
+5       10      1:2
+6       15      1:2
+7       21      1:3
+8       28      1:3
+9       36      1:4
+10      45      1:4
+11      55      1:5
 
 However, for big O notation, we're looking for the abstract order of growth, not actual step count.  In that case the upper bounds of both loops is approximately n.  Because they're nested, they are multiplied together (n * n = n²).
 
